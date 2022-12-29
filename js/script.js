@@ -1,13 +1,13 @@
 {
     const init = () => {
-        const formElement = document.querySelector(".js-form"); 
+        const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", (event) => {
-        event.preventDefault();
+            event.preventDefault();
 
-        const inputElement = document.querySelector(".js-input");
-        const currencyElement = document.querySelector(".js-currency");        
+            const inputElement = document.querySelector(".js-input");
+            const currencyElement = document.querySelector(".js-currency");
 
-        displayResult(calculate(currencyElement.value, inputElement.value), currencyElement.value);
+            displayResult(calculate(currencyElement.value, inputElement.value), currencyElement.value);
         });
     }
 
@@ -37,7 +37,7 @@
                 break;
 
             case "CHF":
-                return amount / CHF               
+                return amount / CHF
         }
     }
 
