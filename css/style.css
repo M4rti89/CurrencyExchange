@@ -13,6 +13,8 @@ html {
     font-family: "Lato", sans-serif;
     line-height: 1.4;
     background: linear-gradient(90deg, #1a72a9 0%, #293546 100%);
+    background-image: url("../img/background.jpg");
+    background-size: cover;
 }
 
 .form__fieldset {
