@@ -1,39 +1,45 @@
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
+{
+    const init = () => {
+        const formElement = document.querySelector(".js-form"); 
+        formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-let USD = 4.46;
-let EUR = 4.68;
-let GBP = 5.42;
-let CHF = 4.73;
+        const inputElement = document.querySelector(".js-input");
+        const currencyElement = document.querySelector(".js-currency");        
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let inputElement = document.querySelector(".js-input");
-    let currencyElement = document.querySelector(".js-currency");
-
-    let amount = inputElement.value;
-    let currency = currencyElement.value;
-
-    let result;
-
-    switch (currency) {
-        case "USD":
-            result = amount / USD
-            break;
-
-        case "EUR":
-            result = amount / EUR
-            break;
-
-        case "GBP":
-            result = amount / GBP
-            break;
-
-        case "CHF":
-            result = amount / CHF
+        displayResult(calculate(currencyElement.value, inputElement.value), currencyElement.value);
+        });
     }
 
-    resultElement.value = `${result.toFixed(2)} ${currency}`;
+    const displayResult = (result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.value = `${result.toFixed(2)} ${currency}`;
+    }
 
-});
+    const calculate = (currency, amount) => {
+
+        const USD = 4.46;
+        const EUR = 4.68;
+        const GBP = 5.42;
+        const CHF = 4.73;
+
+        switch (currency) {
+            case "USD":
+                return amount / USD
+                break;
+
+            case "EUR":
+                return amount / EUR
+                break;
+
+            case "GBP":
+                return amount / GBP
+                break;
+
+            case "CHF":
+                return amount / CHF               
+        }
+    }
+
+    init();
+}
