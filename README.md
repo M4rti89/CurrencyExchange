@@ -5,3 +5,10 @@ This is my simple currency exchange program where we can calculate the exchange 
 ## [Link](https://m4rti89.github.io/CurrencyExchange/)
 
 ![Screenshot](https://iili.io/HT0VTQf.png)
+
+### Technologies:
+- HTML
+- CSS
+- JS
+- BEM
+- GIT
