@@ -4,7 +4,7 @@ This is my simple currency exchange program where we can calculate the exchange 
 
 ## [Link](https://m4rti89.github.io/CurrencyExchange/)
 
-![Screenshot](https://ibb.co/yFr2YYb)
+![Screenshot](https://freeimage.host/i/HTPQqJe)
 
 ### Technologies:
 - HTML
